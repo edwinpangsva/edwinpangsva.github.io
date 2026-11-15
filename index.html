@@ -7,6 +7,13 @@
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <nav>
+    <strong>Edwin</strong> | 
+    <a href="#projects">Projects</a> | 
+    <a href="#booking">Book a Call</a>
+  </nav>
+
   <!-- Header Section -->
   <header>
     <h1>Hi, I'm Edwin</h1>
@@ -21,14 +28,16 @@
     <!-- Projects Section -->
     <section id="projects">
       <h2>Automation Projects</h2>
-      <ul>
-        <li>
-          <strong>Gmail-to-Discord Keyword Radar:</strong> Automated monitoring system built with Make.com and custom webhooks.
-        </li>
-        <li>
-          <strong>Google Sheets Apps Script Sync:</strong> Custom JavaScript automation for data tracking and reporting.
-        </li>
-      </ul>
+      
+      <article>
+        <h3>Gmail-to-Discord Keyword Radar</h3>
+        <p>Automated email monitoring system built with Make.com filters, regex parsing, and Discord webhooks.</p>
+      </article>
+
+      <article>
+        <h3>Google Sheets Apps Script Sync</h3>
+        <p>Custom JavaScript automation for real-time data synchronization and operational reporting.</p>
+      </article>
     </section>
 
     <hr>
@@ -36,7 +45,46 @@
     <!-- Booking Section -->
     <section id="booking">
       <h2>Book an Appointment</h2>
-      <p>Custom scheduling form coming soon.</p>
+      <p>Want to discuss a role or an automation project? Pick a time and let me know your goal.</p>
+
+      <form id="booking-form">
+        <div>
+          <label for="visitor-name">Your Name:</label><br>
+          <input type="text" id="visitor-name" name="name" placeholder="Jane Doe" required>
+        </div>
+        <br>
+
+        <div>
+          <label for="visitor-email">Your Email:</label><br>
+          <input type="email" id="visitor-email" name="email" placeholder="jane@company.com" required>
+        </div>
+        <br>
+
+        <div>
+          <label for="meeting-time">Preferred Date & Time:</label><br>
+          <input type="datetime-local" id="meeting-time" name="datetime" required>
+        </div>
+        <br>
+
+        <div>
+          <label for="intention">Meeting Intention:</label><br>
+          <select id="intention" name="intention" required>
+            <option value="">-- Select an option --</option>
+            <option value="interview">Job Interview / Opportunity</option>
+            <option value="project">Automation Project Inquiry</option>
+            <option value="networking">General Networking</option>
+          </select>
+        </div>
+        <br>
+
+        <div>
+          <label for="message">Message / Details:</label><br>
+          <textarea id="message" name="message" rows="4" cols="40" placeholder="Tell me a bit about what you'd like to discuss..." required></textarea>
+        </div>
+        <br>
+
+        <button type="submit">Request Appointment</button>
+      </form>
     </section>
   </main>
 
